@@ -292,8 +292,8 @@ void ipl_main()
 	if (TConf.keysDumped)
 		SetKeySlots();
 	
-	if (res == 0)
-		hidWait();
+	// if (res == 0)
+	// 	hidWait();
 
 	if (FileExists("sd:/startup.te"))
 		RunScript("sd:/", newFSEntry("startup.te"));
