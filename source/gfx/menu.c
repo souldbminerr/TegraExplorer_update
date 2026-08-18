@@ -8,6 +8,7 @@
 #include <utils/sprintf.h>
 #include <string.h>
 #include <mem/minerva.h>
+#include <soc/timer.h>
 
 const char *sizeDefs[] = {
     "B ",

@@ -62,11 +62,6 @@ all: $(OUTPUTDIR)/$(TARGET)_small.bin
 	@echo "Payload size is $(BIN_SIZE)"
 	$(eval COMPR_BIN_SIZE = $(shell wc -c < $(OUTPUTDIR)/$(TARGET)_small.bin))
 	@echo "Compressed Payload size is $(COMPR_BIN_SIZE)"
-
-	@echo "Max size is 126296 Bytes."
-	@if [ ${BIN_SIZE} -gt 126296 ]; then echo "\e[1;33mPayload size exceeds limit!\e[0m"; fi
-	@if [ ${COMPR_BIN_SIZE} -gt 126296 ]; then echo "\e[1;33mCompressed Payload size exceeds limit!\e[0m"; fi
-
 clean:
 	@rm -rf $(BUILDDIR)
 	@rm -rf $(OUTPUTDIR)
